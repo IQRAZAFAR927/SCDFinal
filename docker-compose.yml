@@ -1,0 +1,31 @@
+version: '3'
+services:
+  client:
+    build: ./client
+    ports:
+      - "2328:3000"
+
+  comments:
+    build: ./comments
+    ports:
+      - "2328:4000"
+
+  event-bus:
+    build: ./event-bus
+    ports:
+      - "2328:5000"
+
+  moderation:
+    build: ./moderation
+    ports:
+      - "2328:6000"
+
+  posts:
+    build: ./posts
+    ports:
+      - "2328:7000"
+
+  query:
+    build: ./query
+    ports:
+      - "2328:8000"
